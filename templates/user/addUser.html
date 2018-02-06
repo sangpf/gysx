@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <form method="post" action="/back/user/add_user/">
+        {% csrf_token %}
+        姓名<input type="text" name="name">
+        <br>
+        微信号<input type="text" name="wxAccounts">
+        <br>
+        微信昵称<input type="text" name="wxName">
+        <br>
+        手机号码<input type="text" name="telephone">
+        <br>
+        性别
+        <input type="radio" name="ugender" value="男" checked>男
+        <input type="radio" name="ugender" value="女" checked>女
+        <br>
+        爱好
+        <input type="checkbox" name="uhobby" value="抽烟">抽烟
+        <input type="checkbox" name="uhobby" value="喝酒">喝酒
+        <input type="checkbox" name="uhobby" value="烫头">烫头
+        <br>
+        <input type="submit" value="提交">
+    </form>
+
+</body>
+</html>
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!--
+    invId = request.POST['invId']
+    title = request.POST['title']
+    summary = request.POST['summary']
+    client = request.POST['client']
+    responsibility = request.POST['responsibility']
+    comment = request.POST['comment']
+    type = request.POST['type']
+    status = request.POST['status']
+    cTime = request.POST['cTime']
+    bTime = request.POST['bTime']
+    eTime = request.POST['eTime']
+    -->
+    <form method="post" action="/pro/update_project/">
+        {% csrf_token %}
+        id<input type="text" name="id" value="{{id}}">
+        <br>
+        invId<input type="text" name="invId" value="{{invId}}">
+        <br>
+        title<input type="text" name="title" value="{{title}}">
+        <br>
+        summary<input type="text" name="summary" value="{{summary}}">
+        <br>
+        client<input type="text" name="client" value="{{client}}">
+        <br>
+        responsibility<input type="text" name="responsibility" value="{{responsibility}}">
+        <br>
+        type<input type="text" name="type" value="{{type}}">
+        <br>
+        status<input type="text" name="status" value="{{status}}">
+        <br>
+
+
+        <input type="submit" value="提交">
+    </form>
+
+</body>
+</html>
+
